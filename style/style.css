@@ -7,22 +7,21 @@ header {
     background-color: #000;
     padding: 10px 0px;
 }
-
 header h1 {
     margin: 0px;
     color: #fff;
 }
-
+main {
+    display: flex;
+    margin: 0px auto;
+    padding-top: 20px;
+}
 #boxLeft figure {
     margin: 0px;
 }
-
 #rowText{
     text-align: center;
 }
-
-
-
 footer {
     position: fixed;
     bottom: 0px;
@@ -37,20 +36,19 @@ footer p {
     color: #c6dae4;
     font-size: small;
 }
-
 nav{
     margin: 10px;
 }
-
 nav ul li{
     margin-right:40px;
     padding:0;
     display:inline;
-    list-style:none;
     color: dodgerblue;
     text-decoration:none;
 }
-
+ul li{
+    list-style:none;
+}
 .spacer {
     width: 10%;
 }
@@ -78,33 +76,51 @@ nav ul li{
     margin-right: 0%;
     width: 20%;
 }
+#errorForm{
+    padding-left: 20px;
+}
+.error{
+    color: red;
+    margin-bottom: 20px;
+    font-size: 0.9em;
+    margin: 5px 0px;
+}
+#rowsubmit{
+    padding-top: 30px;
+}
+#submitButton{
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: dodgerblue;
+    width: 30%;
+    border-radius: 10px;
+    color: #fff;
+}
+#submitButton p{
+    margin: 0px;
+}
+#submitButton:hover{
+    transform: scale(1.1);
+}
 
-@media only screen and (min-width: 900px) {
+/*******************************************************************************/
 
-
-
+@media only screen and (min-width: 1000px) {
     main {
-        display: flex;
-        margin: 0px auto;
         width: 80%;
-        padding-top: 20px;
     }
-
     #boxLeft {
         margin: 0px;
         width: 50%;
-
     }
-
     #boxLeft img {
         width: 100%;
     }
-
     #boxRight {
         margin: 0px;
         width: 50%;
     }
-
     #rowText h1{
         margin: 20px 0px 0px 0px;
         color: dodgerblue;
@@ -113,7 +129,6 @@ nav ul li{
         margin: 0px;
         color: dimgray;
     }
-
     #rowForm{
         width: 100%;
         padding: 0px;
@@ -121,80 +136,47 @@ nav ul li{
         padding: 0px;
         margin-bottom: 30px;
     }
-
     #rowForm  ul{
         list-style: none;
         padding: 0px;
     }
-
     #rowForm  li{
         padding: 0px 0px 0px 50px;
     }
-
     input{
         border-radius: 10px;
         border: 0px;
         padding: 20px 0px 20px 10px;
         margin-bottom: 10px;
-
+        font-size: 1.2em;
     }
-
-
-
     li p{
         margin: 0px 0px 0px 10px;
         font-size: 10px;
         color: dimgray;
     }
-
-    #rowsubmit{
-        padding-top: 30px;
-    }
-
-    #submitButton{
-        text-align: center;
-        margin: 0 auto;
-        padding: 20px;
-        background-color: dodgerblue;
-        width: 30%;
-        border-radius: 10px;
-        color: #fff;
-    }
-
-    #submitButton p{
-        margin: 0px;
-    }
-
-
-
-
 }
 
-@media only screen and (max-width: 899px) {
+/*******************************************************************************/
+
+@media only screen and (max-width: 999px) {
 
     main {
-        display: flex;
-        margin: 0px auto;
         width: 100%;
-        padding-top: 20px;
     }
-
     #boxLeft {
-        display: none;
-
+        margin: 0px;
+        width: 30%;
+        margin-left: 30px;
+        padding-top: 50px;
     }
-
     #boxLeft img {
         width: 100%;
     }
-
-
-
     #boxRight {
         margin: 0px;
-        width: 100%;
+        width: 70%;
     }
-
     #rowText h1{
         margin: 20px 0px 0px 0px;
         color: dodgerblue;
@@ -203,7 +185,6 @@ nav ul li{
         margin: 0px;
         color: dimgray;
     }
-
     #rowForm{
         width: 100%;
         padding: 0px;
@@ -211,121 +192,42 @@ nav ul li{
         padding: 0px;
         margin-bottom: 30px;
     }
-
     #rowForm  ul{
         list-style: none;
         padding: 0px;
     }
-
     #rowForm  li{
         padding: 0px 0px 0px 50px;
     }
-
     input{
         border-radius: 10px;
         border: 0px;
         padding: 20px 0px 20px 10px;
         margin-bottom: 10px;
-
+        font-size: 1.1em;
     }
-
     li p{
         margin: 0px 0px 0px 10px;
         font-size: 10px;
         color: dimgray;
     }
-
-    #rowsubmit{
-        padding-top: 30px;
-    }
-
-    #submitButton{
-        text-align: center;
-        margin: 0 auto;
-        padding: 20px;
-        background-color: dodgerblue;
-        width: 30%;
-        border-radius: 10px;
-        color: #fff;
-    }
-
-    #submitButton p{
-        margin: 0px;
-    }
-
-
-    footer {
-        position: fixed;
-        bottom: 0px;
-        text-align: center;
-        margin: 0px auto;
-        width: 100%;
-        background-color: #fff;
-        padding: 10px 0px;
-    }
-    footer p {
-        margin: 0px 20px;
-        color: #c6dae4;
-        font-size: small;
-    }
-
-    nav{
-        margin: 10px;
-    }
-
-    nav ul li{
-        margin-right:40px;
-        padding:0;
-        display:inline;
-        list-style:none;
-        color: dodgerblue;
-        text-decoration:none;
-    }
 }
+
+/*******************************************************************************/
 
 @media only screen and (max-width: 699px) {
-    header {
-        text-align: center;
-        margin: 0px auto;
-        width: 100%;
-        background-color: #000;
-        padding: 10px 0px;
-    }
-
-    header h1 {
-        margin: 0px;
-        color: #fff;
-    }
-
-    main {
-        display: flex;
-        margin: 0px auto;
-        width: 100%;
-        padding-top: 20px;
-    }
 
     #boxLeft {
         display: none;
 
     }
-
-    #boxLeft img {
-        width: 100%;
-    }
-
-    #boxLeft figure {
-        margin: 0px;
-    }
-
     #boxRight {
         margin: 0px;
         width: 100%;
     }
-
     #rowText{
         text-align: center;
     }
-
     #rowText h1{
         margin: 20px 0px 0px 0px;
         color: dodgerblue;
@@ -334,7 +236,6 @@ nav ul li{
         margin: 0px;
         color: dimgray;
     }
-
     #rowForm{
         width: 100%;
         padding: 0px;
@@ -342,49 +243,26 @@ nav ul li{
         padding: 0px;
         margin-bottom: 30px;
     }
-
     #rowForm  ul{
         list-style: none;
         padding: 0px;
     }
-
     #rowForm  li{
         padding: 0px 0px 0px 50px;
     }
-
     input{
         border-radius: 10px;
         border: 0px;
         padding: 20px 0px 20px 10px;
         margin-bottom: 10px;
-
+        font-size: 1.3em;
     }
-
-
-
     li p{
         margin: 0px 0px 0px 10px;
         font-size: 10px;
         color: dimgray;
     }
-
-    #rowsubmit{
-        padding-top: 30px;
-    }
-
-    #submitButton{
-        text-align: center;
-        margin: 0 auto;
-        padding: 20px;
-        background-color: dodgerblue;
-        width: 30%;
-        border-radius: 10px;
-        color: #fff;
-    }
-
-    #submitButton p{
-        margin: 0px;
-    }
-
 }
+
+/*******************************************************************************/
 
