@@ -9,10 +9,13 @@ function init() {
 
 function checkForm(){
 
-    //Regex Definition
-    var string = /^[a-zA-Z]*$/;
-    var number = /([0-9])([xyz]{0,1})/;
+    //Elternkonten aller Listen-Elemente
+    var errorList = document.getElementById("errorList");
 
+    //Regex Definition
+    var stringPattern = /^[a-zA-Z]*$/;
+    var numberPattern = /([0-9])([xyz]{0,1})/;
+    var emailPattern = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
 
     var forname = document.getElementById("forname").value;
     var surname = document.getElementById("surname").value;
@@ -23,32 +26,76 @@ function checkForm(){
     var email = document.getElementById("email").value;
     var phone = document.getElementById("phone").value;
 
-    if (!forname.match(string)){
-        alert("KEIN Name");
+    if (!forname.match(stringPattern)){
+        var fornameError = document.createElement('li');
+        errorList.appendChild(fornameError);
+        fornameError.setAttribute('id','fornameError');
+        document.getElementById("fornameError").className = "error";
+        document.getElementById("fornameError").innerHTML = "Gülltigen Vornamen eingeben";
     }else{
-        alert(forname + " ist ein gültiger Name")
+        var listPoint =  document.getElementById("fornameError");
+            errorList.removeChild(listPoint);
     }
 
-    if(!streetNumber.match(number)){
-        alert(streetNumber + " ist KEINE Hausnummer")
+    if (!surname.match(stringPattern)){
+        document.getElementById("surnameError").className = "error";
+        document.getElementById("surnameError").innerHTML = "Gülltigen Nachnamen eingeben";
     }else{
-        alert(streetNumber + " ist eine gültige Hausnummer")
+        document.getElementById("surnameError").className = "success";
+        document.getElementById("surnameError").innerHTML = "Nachname: " + surname;
     }
 
-    //Ueberpruefung der Email ohne Regex
-    var atpos = email.indexOf("@");
-    var dotpos = email.lastIndexOf(".");
-    if (atpos<1 || dotpos<atpos+2 || dotpos+2>=email.length) {
-        alert(email + " ist KEINE gültige Email");
-        return false;
-    }else {
-        alert(email + " ist eine gültige Email");
+    if (!street.match(stringPattern)){
+        document.getElementById("streetError").className = "error";
+        document.getElementById("streetError").innerHTML = "Gülltigen Straßennamen eingeben";
+    }else{
+        document.getElementById("streetError").className = "success";
+        document.getElementById("streetError").innerHTML = "Straße: " + street;
     }
 
+    if(!streetNumber.match(numberPattern)){
+        document.getElementById("streetNumberError").className = "error";
+        document.getElementById("streetNumberError").innerHTML = "Gülltige Hausnummer eingeben";
+    }else{
+        document.getElementById("streetNumberError").className = "success";
+        document.getElementById("streetNumberError").innerHTML = "Hausnummer: " + streetNumber;
+    }
 
+    if(!zipCode.match(numberPattern)){
+        document.getElementById("zipCodeError").className = "error";
+        document.getElementById("zipCodeError").innerHTML = "Gülltige Postleitzahl eingeben";
+    }else{
+        document.getElementById("zipCodeError").className = "success";
+        document.getElementById("zipCodeError").innerHTML = "Postleitzahl: " + zipCode;
+    }
+
+    if (!location.match(stringPattern)){
+        document.getElementById("locationError").className = "error";
+        document.getElementById("locationError").innerHTML = "Gülltigen Straßennamen eingeben";
+    }else{
+        document.getElementById("locationError").className = "success";
+        document.getElementById("locationError").innerHTML = "Straße: " + location;
+    }
+
+    if (!email.match(emailPattern)) {
+        document.getElementById("emailError").className = "error";
+        document.getElementById("emailError").innerHTML = "Gülltige Email-Adresse eingeben";
+    } else{
+            document.getElementById("emailError").className = "success";
+            document.getElementById("emailError").innerHTML = "Email: " + email;
+        }
+
+    if(!phone.match(numberPattern)){
+        document.getElementById("phoneError").className = "error";
+        document.getElementById("phoneError").innerHTML = "Gülltige Telefonnummer eingeben";
+    }else{
+        document.getElementById("phoneError").className = "success";
+        document.getElementById("phoneError").innerHTML = "Telefonnummer: " + phone;
+    }
 
     alert(forname + " " + surname + " " + street + " " + streetNumber + " " + zipCode + " " + location + " " + email + " " + phone);
 }
+
 
 function openTerms() {
     var text =
