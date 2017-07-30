@@ -216,7 +216,10 @@ ul li{
 /*******************************************************************************/
 
 @media only screen and (max-width: 699px) {
-
+    #main{
+        overflow: auto;
+        padding-bottom: 100px;
+    }
     #boxLeft {
         display: none;
 
@@ -265,6 +268,7 @@ ul li{
         font-size: 10px;
         color: dimgray;
     }
+
 }
 
 /*******************************************************************************/
