@@ -15,7 +15,7 @@ function checkForm(){
     //Regex Definition
     var stringPattern = /^[a-zA-Z]*$/;
     var numberPattern = /([0-9])([xyz]{0,1})/;
-    var emailPattern = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+    var emailPattern = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$/;
 
     var forname = document.getElementById("forname").value;
     var surname = document.getElementById("surname").value;
@@ -56,7 +56,7 @@ function checkForm(){
 
 //-------------------------------------------------------------------------------------------------------------------
 
-//POPUPS
+//POPUPSee
 function openTerms() {
     var text =
         '<p>Bestimmungen: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>';

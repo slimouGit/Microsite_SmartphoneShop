@@ -146,9 +146,11 @@ ul li{
     input{
         border-radius: 10px;
         border: 0px;
-        padding: 20px 0px 20px 10px;
         margin-bottom: 10px;
         font-size: 1.2em;
+    }
+    input[type=text] {
+        padding: 20px 0px 20px 10px;
     }
     li p{
         margin: 0px 0px 0px 10px;
